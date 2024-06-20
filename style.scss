@@ -1,0 +1,167 @@
+$color-primary: hsl(14, 45%, 36%);
+$color-secondary: hsl(332, 51%, 32%);
+
+$color-white: hsl(0, 0%, 100%);
+$color-rose-white: hsl(330, 100%, 98%);
+$color-eggshell: hsl(30, 54%, 90%);
+$color-light-grey: hsl(30, 18%, 87%);
+$color-wenge-brown: hsl(30, 10%, 34%);
+$color-dark-charcoal: hsl(24, 5%, 18%);
+
+$font-title: 'Young Serif', serif;
+$font-body: 'Outfit', serif;
+
+$mobile: 960px;
+
+h1 {
+    font-family: $font-title;
+    color: $color-dark-charcoal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2 {
+    font-family: $font-title;
+    font-weight: normal;
+    color: $color-primary;
+    font-size: 1.5rem;
+}
+
+
+.bold {
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+body {
+    font-family: $font-body;
+    background-color: $color-eggshell;
+    color: $color-wenge-brown;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5rem;
+    font-size: .9rem;
+
+    @media screen and (max-width: $mobile) {
+        margin: 0;
+    }
+
+    section {
+        background-color: $color-white;
+        width: 50%;
+        margin: 6rem;
+        padding: 2rem;
+        border-radius: 20px;
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            border-radius: 0;
+            margin: 0;
+        }
+
+        div {
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .container_preparation {
+            background-color: $color-rose-white;
+            border-radius: 10px;
+            padding: 1rem;
+
+            h4 {
+                font-family: $font-body;
+                color: $color-secondary;
+                margin: 0.5rem;
+            }
+
+            ul {
+                padding: 0 1rem;
+
+                li {
+                    padding: 0 1rem;
+
+
+                }
+
+                li::marker {
+                    color: $color-secondary;
+                    font-size: .5rem;
+                }
+            }
+        }
+
+        .container_text {
+            border-bottom: 1px $color-light-grey solid;
+            padding: 1rem 0.5rem;
+
+            ul {
+                list-style: square;
+                padding: 0 1rem;
+
+                li {
+                    padding: 0 1rem;
+                }
+
+                li::marker {
+                    color: $color-primary;
+                    font-size: .5rem;
+
+                }
+            }
+
+            ol {
+                padding: 0 1rem;
+
+                li {
+                    padding: 0 1rem;
+
+
+                }
+
+                li::marker {
+                    font-family: $font-body;
+                    font-weight: bold;
+                    color: $color-primary;
+                }
+
+            }
+        }
+
+        .container_nutrition {
+            padding: 1rem 0.5rem;
+
+            table {
+                width: 100%;
+
+                td:nth-child(1) {
+                    border-bottom: 1px $color-light-grey solid;
+                    padding-left: 2rem;
+                    width: 50%;
+                }
+
+                td:nth-child(2) {
+                    border-bottom: 1px $color-light-grey solid;
+                    color: $color-primary;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: $color-wenge-brown;
+        padding: 2rem 2rem 0 2rem;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+
+}
